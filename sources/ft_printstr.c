@@ -6,7 +6,7 @@
 /*   By: gabshire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 09:28:40 by gabshire          #+#    #+#             */
-/*   Updated: 2019/05/24 17:12:12 by gabshire         ###   ########.fr       */
+/*   Updated: 2019/05/30 18:52:25 by gabshire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ size_t		ft_printstr(t_format *p)
 	if (len < p->hp)
 	{
 		p->hp -= len;
-		!p->z ? ft_simup(p, p->hp, ' ') : ft_simup(p, p->hp, '0');
+		!p->z || p->m ? ft_simup(p, p->hp, ' ') : ft_simup(p, p->hp, '0');
 		p->len += p->hp;
 	}
 	!p->m ? ft_nap_str(start, len, p) : 0;

@@ -6,7 +6,7 @@
 /*   By: gabshire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:53:38 by gabshire          #+#    #+#             */
-/*   Updated: 2018/11/28 06:02:30 by gabshire         ###   ########.fr       */
+/*   Updated: 2019/06/15 07:47:17 by gabshire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	k = (unsigned char*)s;
 	while (i < n)
 	{
-		k[i] = 0;
+		k[i] = k[i] << 8;
 		++i;
 	}
 }

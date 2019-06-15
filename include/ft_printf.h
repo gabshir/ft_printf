@@ -6,7 +6,7 @@
 /*   By: gabshire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/23 03:47:46 by gabshire          #+#    #+#             */
-/*   Updated: 2019/05/27 08:08:18 by gabshire         ###   ########.fr       */
+/*   Updated: 2019/06/15 07:58:39 by gabshire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct				s_format
 	va_list			arg;
 	int				hp;
 	int				t;
-	char			sr[3];
+	unsigned char 	r;
 	int				len;
 	unsigned char	tp;
 	unsigned char	hps : 1;
@@ -62,7 +62,7 @@ int							ft_printf(char const *s, ...);
 void						ft_flag(t_format *mod);
 void						ft_tochnost(t_format *mod);
 void						ft_hirina(t_format *mod);
-void						ft_specr(t_format *mod);
+void 						spec(t_format *p);
 void						write_and_zero(t_format *p);
 void						ft_restor_p(t_format *p);
 

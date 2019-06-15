@@ -6,7 +6,7 @@
 /*   By: gabshire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 09:30:13 by gabshire          #+#    #+#             */
-/*   Updated: 2019/05/24 17:19:49 by gabshire         ###   ########.fr       */
+/*   Updated: 2019/06/15 09:26:31 by gabshire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,15 @@ static void		ft_format(t_format *p)
 	ft_tochnost(p);
 	ft_tochnost(p);
 	ft_flag(p);
-	ft_specr(p);
+	spec(p);
 	ft_flag(p);
 	p->tp = *p->str;
 	if (p->tp)
-		ft_start(p) ? ++p->str : 0;
-	ft_restor_p(p);
+	{
+		ft_start(p) ? 0 : ft_simup(p, 1, *p->str);
+		++p->str;
+		ft_restor_p(p);
+	}
 }
 
 static	void	ft_cheakp(t_format *p)
@@ -40,7 +43,7 @@ static	void	ft_cheakp(t_format *p)
 	}
 	if (k % 2 == 0)
 	{
-		k /= 2;
+		k = k / 2;
 		p->len += k;
 		ft_simup(p, k, '%');
 		return ;
@@ -67,6 +70,8 @@ int				ft_printf(char const *s, ...)
 {
 	t_format p;
 
+	if (!s)
+		return (-1);
 	ft_bzero(&p, sizeof(p));
 	p.str = (char *)s;
 	va_start(p.arg, s);

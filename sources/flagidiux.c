@@ -16,15 +16,15 @@ size_t	ft_flag_d_i(t_format *p)
 {
 	if (p->tp == 'D')
 		return (ft_printnbr(p, va_arg(p->arg, long long int)));
-	else if (!p->sr[0])
+	else if (!p->r)
 		return (ft_printnbr(p, va_arg(p->arg, int)));
-	else if ((p->sr[0] == 'l' && p->sr[1] == 'l') || p->sr[0] == 'j')
+	else if (p->r == 2)
 		return (ft_printnbr(p, va_arg(p->arg, long long int)));
-	else if (p->sr[0] == 'l' && !p->sr[1])
+	else if (p->r == 1)
 		return (ft_printnbr(p, va_arg(p->arg, long int)));
-	else if (p->sr[0] == 'h' && p->sr[1] == 'h')
+	else if (p->r == 4)
 		return (ft_printnbr(p, (char)va_arg(p->arg, unsigned int)));
-	else if (p->sr[0] == 'h' && !p->sr[1])
+	else if (p->r == 3)
 		return (ft_printnbr(p, (short)va_arg(p->arg, int)));
 	return (0);
 }
@@ -33,15 +33,15 @@ size_t	ft_flag_u(t_format *p)
 {
 	if (p->tp == 'U')
 		return (ft_printnbru(p, va_arg(p->arg, unsigned long int)));
-	else if (!p->sr[0])
+	else if (!p->r)
 		return (ft_printnbru(p, va_arg(p->arg, unsigned int)));
-	else if ((p->sr[0] == 'l' && p->sr[1] == 'l') || p->sr[0] == 'j')
+	else if (p->r == 2)
 		return (ft_printnbru(p, va_arg(p->arg, unsigned long long int)));
-	else if (p->sr[0] == 'l' && !p->sr[1])
+	else if (p->r == 1)
 		return (ft_printnbru(p, va_arg(p->arg, unsigned long int)));
-	else if (p->sr[0] == 'h' && p->sr[1] == 'h')
+	else if (p->r == 4)
 		return (ft_printnbru(p, (unsigned char)va_arg(p->arg, int)));
-	else if (p->sr[0] == 'h' && !p->sr[1])
+	else if (p->r == 3)
 		return (ft_printnbru(p, (unsigned short)va_arg(p->arg, int)));
 	return (0);
 }
@@ -55,15 +55,15 @@ size_t	ft_flag_x(t_format *p)
 		return (ft_printx(p, va_arg(p->arg, long long int), f));
 	else if (p->tp == 'p')
 		return (ft_printx(p, va_arg(p->arg, unsigned long long int), f));
-	else if (!p->sr[0])
+	else if (!p->r)
 		return (ft_printx(p, va_arg(p->arg, unsigned int), f));
-	else if ((p->sr[0] == 'l' && p->sr[1] == 'l') || p->sr[0] == 'j')
+	else if (p->r == 2)
 		return (ft_printx(p, va_arg(p->arg, long long int), f));
-	else if (p->sr[0] == 'l' && !p->sr[1])
+	else if (p->r == 1)
 		return (ft_printx(p, va_arg(p->arg, long int), f));
-	else if (p->sr[0] == 'h' && !p->sr[1])
+	else if (p->r == 3)
 		return (ft_printx(p, (unsigned short)va_arg(p->arg, int), f));
-	else if (p->sr[0] == 'h' && p->sr[1] == 'h')
+	else if (p->r == 4)
 		return (ft_printx(p, (unsigned char)va_arg(p->arg, int), f));
 	return (0);
 }

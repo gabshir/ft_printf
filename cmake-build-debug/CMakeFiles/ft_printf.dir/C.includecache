@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ft_printf.h
+../minilibft/minilibft.h
+../minilibft/minilibft.h
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+stdarg.h
+-
+wchar.h
+-
+limits.h
+-
+stdlib.h
+-
+
+../minilibft/minilibft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+wchar.h
+-
+
+/Users/gabshire/Desktop/ft_printf/sources/printf.c
+ft_printf.h
+/Users/gabshire/Desktop/ft_printf/sources/ft_printf.h
+

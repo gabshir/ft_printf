@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/gabshire/Desktop/ft_printf/include -I/Users/gabshire/Desktop/ft_printf/minilibft 
+C_INCLUDES = -I/Users/gabshire/Desktop/test/ft_printf/include -I/Users/gabshire/Desktop/test/ft_printf/minilibft 
 

@@ -70,7 +70,6 @@ void	write_and_zero(t_format *p)
 void	ft_restor_p(t_format *p)
 {
 	p->hp = 0;
-	p->hps = 0;
 	p->t = 0;
 	p->st = 0;
 	p->tp = 0;

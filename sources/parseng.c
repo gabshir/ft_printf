@@ -32,7 +32,6 @@ static void	ft_bonus(t_format *p, int f)
 		p->m = 1;
 	}
 	p->hp = s;
-	p->hps = 1;
 }
 
 void		ft_hirina(t_format *p)
@@ -50,10 +49,7 @@ void		ft_hirina(t_format *p)
 		++p->str;
 	}
 	if (str != p->str)
-	{
-		p->hps = 1;
 		p->hp = s;
-	}
 }
 
 void		ft_tochnost(t_format *p)

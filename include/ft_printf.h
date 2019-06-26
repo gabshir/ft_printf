@@ -35,7 +35,6 @@ typedef struct				s_format
 	unsigned char 	r;
 	int				len;
 	unsigned char	tp;
-	unsigned char	hps : 1;
 	unsigned char	st : 1;
 	unsigned char	m : 1;
 	unsigned char	pl : 1;
